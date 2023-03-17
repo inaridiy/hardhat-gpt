@@ -44,7 +44,7 @@ task(TASK_CUSTOM)
 
       const result = await llm(prompt, options).catch((e) => {
         if (!options.continueOnError)
-          throw new Error(`Failed to generate ${args.taskName} for ${targetName}`);
+          throw new Error(`Failed to generate ${args.taskName} for ${targetName} with error: ${e}`);
         return "";
       });
 
