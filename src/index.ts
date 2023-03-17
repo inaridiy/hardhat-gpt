@@ -5,12 +5,20 @@ import * as path from "path";
 import * as R from "ramda";
 import { DEFAULT_GPT_OPTIONS } from "./constants";
 import { loadLLM } from "./llms";
-import { TASK_CUSTOM } from "./task-names";
+import { TASK_AI_REVIEW, TASK_AI_TEST, TASK_CUSTOM } from "./task-names";
 import "./type-extensions";
 import { HardhatGPTConfig } from "./types";
 
+task(TASK_AI_TEST).setAction(async (_, hre) => {
+  await hre.run(TASK_CUSTOM, { taskName: "test" });
+});
+
+task(TASK_AI_REVIEW).setAction(async (_, hre) => {
+  await hre.run(TASK_CUSTOM, { taskName: "review" });
+});
+
 task(TASK_CUSTOM)
-  .addOptionalParam("taskName")
+  .addPositionalParam("taskName", "The name of the task to execute")
   .setAction(async (args, hre) => {
     const options: HardhatGPTConfig = R.mergeDeepRight(
       DEFAULT_GPT_OPTIONS,
