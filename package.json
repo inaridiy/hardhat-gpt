@@ -1,9 +1,13 @@
 {
   "name": "hardhat-gpt",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "packageManager": "yarn@3.5.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inaridiy/hardhat-gpt"
+  },
   "author": "Inaridiy <inainainariinainari@gmail.com>",
   "license": "MIT",
   "keywords": [
