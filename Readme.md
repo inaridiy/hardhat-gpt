@@ -40,12 +40,12 @@ npx hardhat ai-review
 
 ### ai-review
 
-Shortcut for ai-execute review.
+Shortcut for `ai-execute review`.
 When the execution is finished, the reviews are stored in the reviews folder
 
 ### ai-test
 
-Shortcut for ai-execute test.
+Shortcut for `ai-execute test`.
 When the execution is finished, the test is stored in the test/ai folder.
 gpt-3.5 does not produce decent output!
 
