@@ -1,8 +1,8 @@
 import { HardhatGPTConfig } from "./types";
 
 export const DEFAULT_REVIEW_PROMPT = `
-Review the following smart contracts.
-Please think logically.
+The following smart contract has a bug.
+Look for bugs and flaws while simulating smart contract behavior.
      
 {{TargetName}}
 
